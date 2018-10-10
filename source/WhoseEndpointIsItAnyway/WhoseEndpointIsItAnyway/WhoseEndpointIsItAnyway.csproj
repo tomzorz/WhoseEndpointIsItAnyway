@@ -2,6 +2,17 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Authors>tomzorz</Authors>
+    <Company>tomzorz</Company>
+    <Description>A tiny .net standard library to help you find your friendly neighborhood endpoint in the sea of vEthernets and npcap loopback points</Description>
+    <Copyright>MIT</Copyright>
+    <PackageLicenseUrl>https://github.com/tomzorz/WhoseEndpointIsItAnyway/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/tomzorz/WhoseEndpointIsItAnyway/</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/tomzorz/WhoseEndpointIsItAnyway/</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>networking, endpoint</PackageTags>
+    <PackageReleaseNotes>- initial release</PackageReleaseNotes>
   </PropertyGroup>
 
 </Project>
