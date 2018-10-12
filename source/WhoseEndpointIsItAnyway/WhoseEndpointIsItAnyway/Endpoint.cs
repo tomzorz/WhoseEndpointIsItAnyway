@@ -21,7 +21,7 @@
         public string Broadcast { get; }
 
         /// <summary>
-        /// The rank of this address, as follows: 0 - WAN; 1 & 2 - Probably what you want; 3 - Might be what you want, but probably infrastructure for virtual machines or something similar; 4 - most definitely infrastructure for virtual machines or something similar; 5 - link local addresses; 6 - something wrong, don't use it
+        /// The rank of this address, as follows: 0 - WAN; 1 and 2 - Probably what you want; 3 - Might be what you want, but probably infrastructure for virtual machines or something similar; 4 - most definitely infrastructure for virtual machines or something similar; 5 - link local addresses; 6 - something wrong, don't use it
         /// </summary>
         public int Rank { get; }
 

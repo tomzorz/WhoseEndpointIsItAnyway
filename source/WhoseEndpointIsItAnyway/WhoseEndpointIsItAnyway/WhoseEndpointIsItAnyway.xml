@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WhoseEndpointIsItAnyway</name>
+    </assembly>
+    <members>
+        <member name="T:WhoseEndpointIsItAnyway.Endpoint">
+            <summary>
+            An endpoint descriptor with the details you actually care about
+            </summary>
+        </member>
+        <member name="P:WhoseEndpointIsItAnyway.Endpoint.Unicast">
+            <summary>
+            The regular IPv4 address of this device on the network this endpoint connects to
+            </summary>
+        </member>
+        <member name="P:WhoseEndpointIsItAnyway.Endpoint.IsWan">
+            <summary>
+            Signals if the unicast address is a WAN address
+            </summary>
+        </member>
+        <member name="P:WhoseEndpointIsItAnyway.Endpoint.Broadcast">
+            <summary>
+            The broadcast address for the subnet this endpoint is connecting to (this is what you'll want to use for e.g. network discovery)
+            </summary>
+        </member>
+        <member name="P:WhoseEndpointIsItAnyway.Endpoint.Rank">
+            <summary>
+            The rank of this address, as follows: 0 - WAN; 1 and 2 - Probably what you want; 3 - Might be what you want, but probably infrastructure for virtual machines or something similar; 4 - most definitely infrastructure for virtual machines or something similar; 5 - link local addresses; 6 - something wrong, don't use it
+            </summary>
+        </member>
+        <member name="T:WhoseEndpointIsItAnyway.NetworkHelper">
+            <summary>
+            Whose Endpoint Is It Anyway, the library where every result is helpful and the expectations against code without pop culture references do not matter
+            </summary>
+        </member>
+        <member name="M:WhoseEndpointIsItAnyway.NetworkHelper.GetFriendlyNeighborhoodEndpoint(System.Boolean)">
+            <summary>
+            Gets you the friendly neighborhood endpoint that you probably want to use in most scenarios
+            </summary>
+            <param name="includeWanIfAvailable">Choose the WAN address if the device has one instead of any other LAN address, defaults to false</param>
+            <returns>The endpoint you probably want with the details you actually care about</returns>
+            <remarks>The WAN address is only going to be returned if the device is not behind a router or anything else that'd get thet address. Also some ISPs NAT the users, so even when the device is directly connected "to the internet" it stil might not get a WAN address.</remarks>
+        </member>
+        <member name="M:WhoseEndpointIsItAnyway.NetworkHelper.RankEndpoints">
+            <summary>
+            Ranks operational endpoints by "usability"
+            </summary>
+            <returns>A list of ranked endpoints with the details you actually care about</returns>
+        </member>
+    </members>
+</doc>

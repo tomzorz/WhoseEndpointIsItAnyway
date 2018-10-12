@@ -12,7 +12,18 @@
     <RepositoryUrl>https://github.com/tomzorz/WhoseEndpointIsItAnyway/</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>networking, endpoint</PackageTags>
-    <PackageReleaseNotes>- initial release</PackageReleaseNotes>
+    <PackageReleaseNotes>- added missing documentation</PackageReleaseNotes>
+    <AssemblyVersion>1.0.1.0</AssemblyVersion>
+    <FileVersion>1.0.1.0</FileVersion>
+    <Version>1.0.1</Version>
   </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>D:\Repos\WhoseEndpointIsItAnyway\source\WhoseEndpointIsItAnyway\WhoseEndpointIsItAnyway\WhoseEndpointIsItAnyway.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="WhoseEndpointIsItAnyway.xml" />
+  </ItemGroup>
 
 </Project>
